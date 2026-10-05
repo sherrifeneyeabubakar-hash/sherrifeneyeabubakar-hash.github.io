@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sherrif — Building things that work</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #9aabcc;
+      --accent: #5b8cff;
+      --accent-2: #33d6a6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #1a2a55 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #0f3d36 0%, transparent 50%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .links a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+    .links a:hover { color: var(--text); }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.15rem;
+      max-width: 34em;
+      margin: 0 0 28px;
+    }
+    .cta {
+      display: inline-flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #7a6bff);
+      color: white;
+    }
+    .btn-ghost {
+      border: 1px solid #2a3a5c;
+      color: var(--text);
+      background: transparent;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 56px;
+    }
+    .card {
+      background: color-mix(in srgb, var(--card) 90%, white 2%);
+      border: 1px solid #22304d;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--accent-2);
+      background: rgba(51, 214, 166, 0.12);
+      border: 1px solid rgba(51, 214, 166, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    footer {
+      margin-top: 64px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo">Sherrif</div>
+      <div class="links">
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <span class="pill">Engineering · building in public</span>
+    <h1>I build reliable software and ship it.</h1>
+    <p class="lead">
+      Simple landing page for a quick intro — swap in your real bio, projects, and links whenever you’re ready.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#contact">Get in touch</a>
+      <a class="btn btn-ghost" href="#work">See projects</a>
+    </div>
+
+    <section class="grid" id="work">
+      <div class="card">
+        <h3>Focus</h3>
+        <p>Backend, tooling, and products that stay maintainable under real traffic.</p>
+      </div>
+      <div class="card">
+        <h3>Approach</h3>
+        <p>Clear specs, small shipping loops, and honest status when something is blocked.</p>
+      </div>
+      <div class="card">
+        <h3>Next</h3>
+        <p>Replace these cards with your real projects, stack, and links.</p>
+      </div>
+    </section>
+
+    <footer id="contact">
+      Ready for your email or LinkedIn link here · Built as a starter page you can edit.
+    </footer>
+  </div>
+</body>
+</html>
